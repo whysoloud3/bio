@@ -62,16 +62,17 @@ img {
     margin-top: 10px;
 }
 
-.fa-brands {
+.fa-brands, .fa-solid {
     text-decoration: none;
     padding: 5px;
     color: rgba(255, 255, 255, 0.7);
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.fa-brands:hover {
+.fa-brands:hover, .fa-solid:hover {
     transform: scale(1.15);
-    color: black;
+    color: #00000;
+    filter: brightness(0.05);
 }
 
 .fa-discord:active {
@@ -90,12 +91,13 @@ body.dark-theme .card {
 }
 
 /* В темной теме */
-body.dark-theme .fa-brands {
+body.dark-theme .fa-brands, body.dark-theme .fa-solid {
     color: rgba(0, 0, 0, 0.6);
 }
 
-body.dark-theme .fa-brands:hover {
+body.dark-theme .fa-brands:hover, body.dark-theme .fa-solid:hover {
     color: #ffffff;
+    filter: brightness(0.95);
 }
 
 @keyframes gradientBG {
@@ -156,6 +158,16 @@ body::before {
     z-index: -1;
 }
 
+/* Анимация медленного плавания лапок */
+@keyframes pawMovement {
+    from { background-position: 0 0; }
+    to { background-position: 70px 70px; }
+}
+
+body::before {
+    animation: pawMovement 120s linear infinite;
+}
+
 body::after {
     content: "";
     position: fixed;
@@ -193,7 +205,7 @@ body.dark-theme::after {
 .roblox-link:hover .roblox-icon {
     transform: scale(1.1);
     opacity: 1;
-    filter: invert(0) brightness(0.1);
+    filter: invert(1) brightness(0.16);
 }
 
 body.dark-theme .roblox-icon {
@@ -204,6 +216,6 @@ body.dark-theme .roblox-icon {
 
 body.dark-theme .roblox-link:hover .roblox-icon {
     filter: invert(1);
-    brightness: 1;
+    filter: invert(1) brightness(0.95);
     opacity: 1;
 }
