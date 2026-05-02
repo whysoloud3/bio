@@ -81,7 +81,6 @@ img {
 
 .fa-brands:hover, .fa-solid:hover {
     transform: scale(1.15);
-    color: #00000;
     filter: brightness(0.05);
 }
 
