@@ -2,40 +2,53 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>whysoloud3 // Карточка</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</a>
+</head>
 <body>
+
 <button class="theme-toggle" onclick="toggleTheme()">
     <i class="fas fa-moon"></i>
 </button>
-    <div class="container">
-        <div class="card">
-            <img src="avatar.jpg" height="130px">
-            <h1 class="zagolovok">whysoloud3</h1>
-            <p class="text">Снизу находятся кнопки перекидывающие на мои соц-сети!</p>
-        </div>
-        <div class="social-buttons">
-            <a href="https://ru.namemc.com/profile/whysoloud3.1" target="_blank" class="fa-solid fa-cube" style="font-size: 32px;"></a>
-            <a href="https://open.spotify.com/user/31rdjtfd57ok2ddndnz55lhvzwra?si=612b5e962ac3469e" target="_blank" class="fa-brands fa-spotify" style="font-size: 32px;"></a>
-            <div class="discord-copy-btn" onclick="copyDiscord(this)" style="cursor: pointer; display: inline-block;">
-  <i class="fa-brands fa-discord discord" style="font-size: 32px;"></i>
-</div>
-            <a href="https://steamcommunity.com/id/whysoloud3/" target="_blank" class="fa-brands fa-steam"; style="font-size: 32px;"></a>
-                        <a href="https://www.roblox.com/users/593342978/profile" target="_blank" class="roblox-link">
-    <img src="roblox-icon.png" alt="Roblox" class="roblox-icon">
-</a>
-        </div>
+
+<div class="container">
+    <div class="card">
+        <img src="avatar.jpg" height="130px" alt="Avatar">
+        <h1 class="zagolovok">whysoloud3</h1>
+        <p class="text">Снизу находятся кнопки перекидывающие на мои соц-сети!</p>
     </div>
+
+    <div class="social-buttons">
+        <a href="https://ru.namemc.com/profile/whysoloud3.1" target="_blank" class="fa-solid fa-cube" style="font-size: 32px;"></a>
+        <a href="https://open.spotify.com/user/31rdjtfd57ok2ddndnz55lhvzwra?si=612b5e962ac3469e" target="_blank" class="fa-brands fa-spotify" style="font-size: 32px;"></a>
+
+        <div class="discord-copy-btn" onclick="copyDiscord(this)" style="cursor: pointer; display: inline-block;">
+            <i class="fa-brands fa-discord discord-icon" style="font-size: 32px;"></i>
+        </div>
+
+        <a href="https://steamcommunity.com/id/whysoloud3/" target="_blank" class="fa-brands fa-steam" style="font-size: 32px;"></a>
+
+        <a href="https://www.roblox.com/users/593342978/profile" target="_blank" class="roblox-link">
+            <img src="roblox-icon.png" alt="Roblox" class="roblox-icon">
+        </a>
+    </div>
+</div>
+
+<div class="footer-text">self-coded</div>
+
 <script>
-function copyDiscord(element) {
+function copyDiscord() {
     const discordNick = "xso6er77";
+    const discordIcon = document.querySelector('.discord-icon');
 
     navigator.clipboard.writeText(discordNick).then(() => {
+        discordIcon.classList.add('clicked');
+        setTimeout(() => {
+            discordIcon.classList.remove('clicked');
+        }, 1000);
     });
 }
 
@@ -51,18 +64,7 @@ function toggleTheme() {
         icon.classList.replace('fa-sun', 'fa-moon');
     }
 }
-const discordIcon = document.querySelector('.fa-discord');
-
-discordIcon.addEventListener('click', () => {
-    discordIcon.classList.add('clicked');
-
-    setTimeout(() => {
-        discordIcon.classList.remove('clicked');
-    }, 1000);
-});
-
 </script>
 
-<div class="footer-text">self-coded</div>
-
 </body>
+</html>
