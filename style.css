@@ -18,7 +18,7 @@
 }
 
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ee7752, #9366d4, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradientBG 60s ease infinite;
     color: #222324;
@@ -45,8 +45,8 @@ body {
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.7);
-    width: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 310px;
     height: 250px;
     padding: 30px;
     border-radius: 30px;
@@ -57,7 +57,15 @@ body {
 }
 
 .card img {
-    border-radius: 15px;
+    border-radius: 14px;
+}
+
+p {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
 }
 
 .zagolovok {
@@ -68,7 +76,7 @@ body {
     text-decoration: none;
     padding: 5px;
     color: rgba(255, 255, 255, 0.7);
-    transition: transform 0.2s ease, color 0.2s ease, filter 0.2s ease;
+    transition: transform 0.4s ease, color 0.4s ease, filter 0.4s ease;
     display: inline-block;
 }
 
@@ -166,7 +174,7 @@ body::after {
     background-size: 400% 400%;
     animation: gradientBG 60s ease infinite;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
     z-index: -2;
     pointer-events: none;
     opacity: 0.1;
@@ -180,14 +188,7 @@ body.dark-theme::after {
     padding-left: 10px;
     width: 42px;
     margin: -10px;
-    transition: 0.2s;
-}
-
-.roblox-icon {
-    padding-left: 10px;
-    width: 42px;
-    margin: -10px;
-    transition: 0.2s;
+    transition: 0.4s;
     filter: invert(1);
     opacity: 0.7;
 }
